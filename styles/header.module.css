@@ -1,0 +1,18 @@
+@keyframes fadeInTransformIn {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 35px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.fadeIn {
+  animation-duration: .6s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-name: fadeInTransformIn
+}
