@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       height: {
         "19/20": "95%"
+      },
+      width: {
+        "19/20": "95%"
       }
     },
   },

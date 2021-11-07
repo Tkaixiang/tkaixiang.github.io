@@ -1,0 +1,7 @@
+.menu li {
+    @apply cursor-pointer mt-5 mb-5 pl-10 pr-10 font-semibold transition duration-200 hover:opacity-30
+}
+
+.bgImage {
+    @apply h-full z-0;
+}
