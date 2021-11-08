@@ -8,6 +8,10 @@ import { useEffect } from 'react'
 import useState from 'react-usestateref'
 
 var lastTrue = ""
+let intersectionRatios = {
+    about: 0,
+    showcase: 0
+}
 export default function Home() {
   const [visibilities, setVisibilities, visibilitiesRef] = useState({
     about: false,
@@ -18,15 +22,22 @@ export default function Home() {
     const copy = JSON.parse(JSON.stringify(visibilitiesRef.current))
     let trueCount = 0
     let trueName = ""
+    // only 1 should be true at any moment
     for (let i = 0; i < entries.length; i++) {
       if (entries[i].intersectionRatio >= 0.05) {
+        for (const page in intersectionRatios) {
+            if (entries[i].intersectionRatio > intersectionRatios[page]) {
+                copy[page] = false
+                intersectionRatios[page] = entries[i].intersectionRatio
+            }
+        }
         copy[entries[i].target.id] = true
         trueCount += 1
         trueName = entries[i].target.id
       }
       else copy[entries[i].target.id] = false
     }
-    if (!copy[lastTrue] && lastTrue !== trueName && trueCount <= 1) {
+    if (lastTrue !== trueName && trueCount <= 1) {
       lastTrue = trueName
       setVisibilities(copy)
     }
@@ -34,9 +45,9 @@ export default function Home() {
 
   useEffect(() => {
     let observer = new IntersectionObserver(mutationHandler, {
-      root: null,
+      root: document.getElementById("main-body"),
       rootMargin: '0px',
-      threshold: [0.05, 0.5, 1.0]
+      threshold: [0.05, 0.25, 0.5, 0.75, 1.0]
     })
     observer.observe(document.getElementById("about"))
     observer.observe(document.getElementById("showcase"))
@@ -47,7 +58,7 @@ export default function Home() {
   }
 
   return (
-    <div style={{overflowY: "scroll", height: "100vh", scrollSnapType: "y mandatory"}}>
+    <div id="main-body" style={{overflowY: "scroll", height: "100vh"}}>
     <div style={{height: "fit-content", paddingBottom: "5vh"}}>
       <Head>
         <title>Tkaixiang</title>
@@ -60,7 +71,7 @@ export default function Home() {
           <Header scrollTo={scrollToElement} />
         </div>
 
-        <div name="about" id="about" className="flex items-center" style={{ scrollSnapAlign: "start", height: "fit-content", paddingBottom: "15vh" }}>
+        <div name="about" id="about" className="flex items-center" style={{ scrollSnapAlign: "start", height: "fit-content" }}>
           <Element className={`element-style ${visibilities.about ? "fade-in" : "opacity-0"}`}>
             <About visibilities={visibilities} />
           </Element>

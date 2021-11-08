@@ -48,14 +48,16 @@ const Header = (props) => {
     }, [])
 
     return (
-        <div className="h-full text-center" style={{ position: "relative", top: 0 }}>
-            <div className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-extrabold">
-                <h1 style={{ whiteSpace: "pre-line", position: "absolute", margin: "auto", left: 0, right: 0, top: "40%"}} className={`bg-clip-text text-transparent bg-gradient-to-r text-center from-red-500 to-blue-500`}>
+        <div style={{justifyContent: "space-between"}} className="h-full text-center flex items-center flex-col">
+            <div>
+            </div>
+            <div className="text-6xl h-6 lg:text-7xl xl:text-8xl 2xl:text-9xl 2xl:h-10 font-extrabold">
+                <h1 style={{ overflow: "hidden",  whiteSpace: "pre-line"}} className={`bg-clip-text text-transparent bg-gradient-to-r text-center from-red-500 to-blue-500`}>
                     {header}
                 </h1>
             </div>
 
-            <div style={{ position: "absolute", bottom: "20px" }} className="text-center w-full flex justify-center text-gray-800 ">
+            <div className="mb-3 text-center w-full flex justify-center text-gray-800">
                 {finishedOnce && (
                     <div onClick={() => {
                         props.scrollTo("about")
