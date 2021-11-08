@@ -48,9 +48,9 @@ const Header = (props) => {
     }, [])
 
     return (
-        <div className="h-full" style={{ display: "flex", justifyContent: "center", alignItems: "center", overflowY: "auto" }}>
-            <div className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-extrabold text-center">
-                <h1 style={{ whiteSpace: "pre-line" }} className={`bg-clip-text text-transparent bg-gradient-to-r text-center from-red-500 to-blue-500`}>
+        <div className="h-full text-center" style={{ position: "relative", top: 0 }}>
+            <div className="text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-extrabold">
+                <h1 style={{ whiteSpace: "pre-line", position: "absolute", margin: "auto", left: 0, right: 0, top: "40%"}} className={`bg-clip-text text-transparent bg-gradient-to-r text-center from-red-500 to-blue-500`}>
                     {header}
                 </h1>
             </div>
