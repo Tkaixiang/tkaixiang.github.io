@@ -6,23 +6,22 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-	"deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "deploy": "export NODE_ENV=production && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^12.0.2",
     "next": "12.0.2",
     "next-optimized-images": "^2.6.2",
+    "postcss": "^8.3.11",
     "rc-progress": "^3.1.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scroll": "^1.8.4",
-    "react-usestateref": "^1.0.8"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "eslint": "7",
-    "eslint-config-next": "12.0.2",
-    "postcss": "^8.3.11",
+    "react-usestateref": "^1.0.8",
     "tailwindcss": "^2.2.19",
     "webp-loader": "^0.6.0"
-  }
+  },
+  "devDependencies": {}
 }
