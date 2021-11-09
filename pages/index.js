@@ -59,7 +59,7 @@ export default function Home(props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }} className="bg-fixed fade-in w-full h-full">
+        <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }} className="backgroundStyle bg-fixed fade-in w-full h-full">
           <div className="h-screen" style={{ scrollSnapAlign: "center" }}>
             <Header scrollTo={scrollToElement} />
           </div>
