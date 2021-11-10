@@ -46,7 +46,12 @@ export default function Home(props) {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         setIOS(true)
     }
-  }, [])
+
+    window.onresize = () => {
+        setSH(window.innerHeight)
+    }
+      
+    }, [])
 
   useEffect(() => {
     // issue is that editing the scrollSnapAlign will always automatically snap to that point even if u are not out of bounds
@@ -59,7 +64,7 @@ export default function Home(props) {
   }
 
   return (
-    <div id="main-body" style={{ overflowY: "scroll", height: screenHeight, scrollSnapType: isiOS ? "y proximity" : "y mandatory" }}>
+    <div id="main-body" style={{ overflowY: "scroll", height: screenHeight, scrollSnapType: isiOS ? "none" : "y mandatory" }}>
       <div style={{ height: "fit-content" }}>
         <Head>
           <title>Tkaixiang</title>
