@@ -39,7 +39,7 @@ const About = (props) => {
         line5: useState(0)
     }
 
-    const mutationHandler = (entries, observer) => {
+    const mutationHandler = (entries, observer): void => {
         for (let i = 0; i < entries.length; i++) {
             if (entries[i].isIntersecting && progressList[entries[i].target.id][2].current === 0) {
                 setTimeout(() => { progressList[entries[i].target.id][1](progressConstants[entries[i].target.id]) }, 400)

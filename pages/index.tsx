@@ -47,7 +47,7 @@ export default function Home(props) {
       
     }, [])
 
-  const scrollToElement = (name: string) => {
+  const scrollToElement = (name: string): void => {
     scroller.scrollTo(name, { containerId: 'main-body', duration: 500, smooth: true, offset: -30 })
   }
 
