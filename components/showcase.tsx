@@ -7,7 +7,7 @@ import buildit from '../public/assets/buildit.jpg'
 
 const Showcase = (props) => {
 
-    const openUrl = (url) => {
+    const openUrl = (url: string) => {
         window.open(url, '_blank').focus();
     }
 

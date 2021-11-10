@@ -97,12 +97,12 @@ const About = (props) => {
                 <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 ">
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-48">
-                            <img src={ReactLogo} layout="responsive" />
+                            <img src={ReactLogo} />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-24">
-                            <img src={javascript} layout="responsive" />
+                            <img src={javascript} />
                         </div>
                     </div>
 
@@ -120,47 +120,47 @@ const About = (props) => {
                 <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 ">
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-32">
-                            <img src={NodeJS} layout="responsive" />
+                            <img src={NodeJS}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-36">
-                            <img src={mongodb} layout="responsive" />
+                            <img src={mongodb}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-48">
-                            <img src={nginx} layout="responsive" />
+                            <img src={nginx}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-16">
-                            <img src={linux} layout="responsive" />
+                            <img src={linux}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-32">
-                            <img src={sqlite} layout="responsive" />
+                            <img src={sqlite}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-48">
-                            <img src={express} layout="responsive" />
+                            <img src={express}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-48">
-                            <img src={fastify} layout="responsive" />
+                            <img src={fastify}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-48">
-                            <img src={websocket} layout="responsive" />
+                            <img src={websocket}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-48">
-                            <img src={flask} layout="responsive" />
+                            <img src={flask}  />
                         </div>
                     </div>
                 </div>
@@ -178,12 +178,12 @@ const About = (props) => {
                 <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 ">
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-24">
-                            <img src={javascript} layout="responsive" />
+                            <img src={javascript}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-56">
-                            <img src={python} layout="responsive" />
+                            <img src={python}  />
                         </div>
                     </div>
                 </div>
@@ -210,27 +210,27 @@ const About = (props) => {
                 <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 ">
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-48">
-                            <img src={tableau} layout="responsive" />
+                            <img src={tableau}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-32">
-                            <img src={unity} layout="responsive" />
+                            <img src={unity}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-32">
-                            <img src={cpp} layout="responsive" />
+                            <img src={cpp}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-40">
-                            <img src={godot} layout="responsive" />
+                            <img src={godot}  />
                         </div>
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div className="w-16">
-                            <img src={csharp} layout="responsive" />
+                            <img src={csharp}  />
                         </div>
                     </div>
                 </div>

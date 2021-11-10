@@ -14,7 +14,8 @@ export default function Home(props) {
     showcase: false
   })
   const [screenHeight, setSH] = useState(0)
-  const mutationHandler = (entries, observer) => {
+
+  const mutationHandler = (entries, observer): void => {
     const copy = JSON.parse(JSON.stringify(visibilitiesRef.current))
     let trueCount = 0
     // only 1 should be true at any moment
@@ -40,14 +41,14 @@ export default function Home(props) {
 
     setSH(window.innerHeight)
 
-    window.onresize = () => {
+    window.onresize = (): void => {
         setSH(window.innerHeight)
     }
       
     }, [])
 
-  const scrollToElement = (name) => {
-    scroller.scrollTo(name, { containerId: 'main-body', duration: 500, smooth: true })
+  const scrollToElement = (name: string) => {
+    scroller.scrollTo(name, { containerId: 'main-body', duration: 500, smooth: true, offset: -30 })
   }
 
   return (

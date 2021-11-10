@@ -9,7 +9,9 @@ const Header = (props) => {
     const [finishedOnce, finishedOnceSet, finishedOnceRef] = useState(false)
     const [playing, setPlaying] = useState(false)
 
-    const sleep = (ms) => {
+                        // async functions return a promise
+                        // add the type of your return function inside the <>
+    const sleep = (ms: number): Promise<void> => {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
@@ -27,24 +29,28 @@ const Header = (props) => {
         }
         if (!finishedOnceRef.current) finishedOnceSet(true)
         await sleep(1000)
-        hideText()
+        await hideText()
     }
 
-    const hideText = async () => {
+    const hideText = async (): Promise<void> => {
         while (headerRef.current.length > 0) {
             setHeader(headerRef.current.slice(0, -1))
             await sleep(25)
         }
         await sleep(100)
-        playText()
+        await playText()
     }
-
-    useEffect(async () => {
+    
+    const startUp = async (): Promise<void> => {
         if (!playing) {
             await sleep(500)
-            playText()
+            await playText()
             setPlaying(true)
         }
+    }
+
+    useEffect(() => {
+        startUp()
     }, [])
 
     return (
