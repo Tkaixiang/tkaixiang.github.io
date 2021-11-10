@@ -15,7 +15,7 @@ export default function Home(props) {
   })
   const [snapDirection, setSnapDirection] = useState("start")
   const [screenHeight, setSH] = useState(0)
-
+  const [isiOS, setIOS] = useState(false)
   const mutationHandler = (entries, observer) => {
     const copy = JSON.parse(JSON.stringify(visibilitiesRef.current))
     let trueCount = 0
@@ -41,6 +41,11 @@ export default function Home(props) {
     observer.observe(document.getElementById("showcase"))
 
     setSH(window.innerHeight)
+
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        setIOS(true)
+    }
   }, [])
 
   useEffect(() => {
@@ -54,7 +59,7 @@ export default function Home(props) {
   }
 
   return (
-    <div id="main-body" style={{ overflowY: "scroll", height: screenHeight, scrollSnapType: "y proximity" }}>
+    <div id="main-body" style={{ overflowY: "scroll", height: screenHeight, scrollSnapType: isiOS ? "y proximity" : "y mandatory" }}>
       <div style={{ height: "fit-content" }}>
         <Head>
           <title>Tkaixiang</title>
@@ -62,7 +67,7 @@ export default function Home(props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }} className="backgroundStyle bg-fixed fade-in w-full h-full">
+        <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover", backgoundAttachment: "scroll"  }} className="backgroundStyle bg-fixed fade-in w-full h-full">
           <div style={{ scrollSnapAlign: "center", height: screenHeight }}>
             <Header scrollTo={scrollToElement} />
           </div>
