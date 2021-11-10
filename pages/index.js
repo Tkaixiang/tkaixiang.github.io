@@ -54,7 +54,7 @@ export default function Home(props) {
   }
 
   return (
-    <div id="main-body" style={{ overflowY: "scroll", height: screenHeight, scrollSnapType: "y mandatory" }}>
+    <div id="main-body" style={{ overflowY: "scroll", height: screenHeight, scrollSnapType: "y proximity" }}>
       <div style={{ height: "fit-content" }}>
         <Head>
           <title>Tkaixiang</title>
