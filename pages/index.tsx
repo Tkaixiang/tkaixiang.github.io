@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Header from './../components/header'
-import About from './../components/about'
-import Showcase from './../components/showcase'
+import Header from '../components/header'
+import About from '../components/about'
+import Showcase from '../components/showcase'
 import background from './../public/assets/background.webp'
 import { Element, scroller } from 'react-scroll'
 import { useEffect } from 'react'
@@ -13,9 +13,7 @@ export default function Home(props) {
     about: false,
     showcase: false
   })
-  const [snapDirection, setSnapDirection] = useState("start")
   const [screenHeight, setSH] = useState(0)
-
   const mutationHandler = (entries, observer) => {
     const copy = JSON.parse(JSON.stringify(visibilitiesRef.current))
     let trueCount = 0
@@ -41,20 +39,19 @@ export default function Home(props) {
     observer.observe(document.getElementById("showcase"))
 
     setSH(window.innerHeight)
-  }, [])
 
-  useEffect(() => {
-    // issue is that editing the scrollSnapAlign will always automatically snap to that point even if u are not out of bounds
-    if (visibilities.showcase) setSnapDirection("end")
-    else if (!visibilities.showcase && !visibilities.about) setSnapDirection("start")
-  }, [visibilities])
+    window.onresize = () => {
+        setSH(window.innerHeight)
+    }
+      
+    }, [])
 
   const scrollToElement = (name) => {
     scroller.scrollTo(name, { containerId: 'main-body', duration: 500, smooth: true })
   }
 
   return (
-    <div id="main-body" style={{ overflowY: "scroll", height: screenHeight, scrollSnapType: "y mandatory" }}>
+    <div id="main-body" style={{ overflowY: "scroll", height: screenHeight }}>
       <div style={{ height: "fit-content" }}>
         <Head>
           <title>Tkaixiang</title>
@@ -62,18 +59,18 @@ export default function Home(props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover" }} className="backgroundStyle bg-fixed fade-in w-full h-full">
-          <div style={{ scrollSnapAlign: "center", height: screenHeight }}>
+        <div style={{ backgroundImage: `url(${background})`, backgroundSize: "cover"  }} className="backgroundStyle bg-fixed fade-in w-full h-full">
+          <div style={{ height: screenHeight }}>
             <Header scrollTo={scrollToElement} />
           </div>
 
-          <div id="about" className="flex items-center mt-5" style={{ scrollSnapAlign: snapDirection, scrollSnapStop: "always", height: "fit-content", paddingBottom: "10vh" }}>
+          <div id="about" className="flex items-center mt-5" style={{ height: "fit-content", paddingBottom: "10vh" }}>
             <Element name="about" className={`element-style ${visibilities.about ? "fade-in" : "opacity-0"}`}>
               <About visibilities={visibilities} />
             </Element>
           </div>
 
-          <div id="showcase" className="flex items-center" style={{ scrollSnapAlign: "start", height: "fit-content", paddingBottom: "10vh" }}>
+          <div id="showcase" className="flex items-center" style={{ height: "fit-content", paddingBottom: "10vh" }}>
             <Element name="showcase" className={`element-style ${visibilities.showcase ? "fade-in" : "opacity-0"}`}>
               <Showcase />
             </Element>
