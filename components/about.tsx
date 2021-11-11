@@ -75,7 +75,7 @@ const About = (props) => {
                 <div className="mr-5">
                     <img src={Tkai28} />
                 </div>
-                <p className="text-gray-800 text-lg xl:text-xl">
+                <p className="text-gray-200 text-lg xl:text-xl">
                     Hi there 😊! I am Teo Kai Xiang (otherwise known by my online names as <code>Tkai</code> or <code>Tkaixiang</code>). I enjoy anything technology related, and have been mainly focusing on <b>Web/App Development</b> &amp; <b>Cybersecurity</b> recently. 
                     <br/><br/>
                     You might see me take part in local <b>Hackathons</b> and <b>CTFs</b>, do say hi if you do ✋! <br/>
