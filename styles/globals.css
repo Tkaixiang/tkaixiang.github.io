@@ -31,5 +31,5 @@ html, body {
 
 
 .element-style {
-  @apply h-19/20 w-full xl:h-5/6 2xl:h-4/5 m-4 md:m-8 xl:m-12 2xl:m-20 p-3 md:p-4 xl:p-6 2xl:p-8 shadow-2xl bg-gray-700 bg-opacity-70 rounded-3xl;
+  @apply m-4 md:m-8 xl:m-12 2xl:m-20 p-3 md:p-4 xl:p-6 2xl:p-8 shadow-2xl bg-gray-700 bg-opacity-70 rounded-3xl;
 }

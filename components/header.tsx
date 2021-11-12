@@ -66,7 +66,7 @@ const Header = (props) => {
             <div className="mb-3 text-center w-full flex justify-center text-gray-800">
                 {finishedOnce && (
                     <div onClick={() => {
-                        props.scrollTo("about")
+                        props.fullpageApi.moveTo("about")
                     }} className={`${headerStyles.fadeIn} p-4 2xl:p-6 shadow-2xl cursor-pointer flex items-center flex-col rounded-lg text-gray-300 bg-gray-300 bg-opacity-40 hover:shadow-sm hover:opacity-50 transition-all duration-300`}>
                         <h1 className="text-xl xl:text-3xl 2xl:text-5xl font-semibold ">Let&apos;s Begin!</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 sm:h-10 sm:w-10 lg:h-10 lg:w-10 xl:h-14 xl:w-14 2xl:h-20 2xl:w-20 mt-10 animate-bounce " fill="none" viewBox="0 0 24 24" stroke="currentColor">
