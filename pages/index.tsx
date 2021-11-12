@@ -58,24 +58,24 @@ export default function Home(props) {
       <ReactFullpage
         //fullpage options
         scrollingSpeed={700} /* Options here */
-        scrollOverflow={true}
         setKeyboardScrolling={false}
+        scrollOverflow={true}
         navigation={true}
         navigationPosition='right'
         render={({ state, fullpageApi }) => {
           return (
             <div>
-              <div id="home" data-anchor="home" className="section" style={{ height: screenHeight }}>
+              <div id="home" data-anchor="slide1" className="section" style={{ height: screenHeight }}>
                 <Header fullpageApi={fullpageApi} />
               </div>
 
-              <div id="about" data-anchor="about" style={{marginTop: "10vh", marginBottom: "10vh"}} className="section flex items-center">
+              <div id="about" data-anchor="slide2" style={{marginTop: "10vh", marginBottom: "10vh"}} className="section flex items-center">
                 <div className={`element-style ${visibilities.about ? "fade-in" : "opacity-0"}`}>
                   <About visibilities={visibilities} />
                 </div>
               </div>
 
-              <div id="showcase" data-anchor="showcase" style={{marginTop: "10vh"}} className="section flex items-center">
+              <div id="showcase" data-anchor="slide3" style={{marginTop: "10vh"}} className="section flex items-center">
                 <div className={`element-style ${visibilities.showcase ? "fade-in" : "opacity-0"}`}>
                   <Showcase />
                 </div>
