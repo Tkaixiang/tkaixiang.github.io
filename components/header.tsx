@@ -64,16 +64,14 @@ const Header = (props) => {
             </div>
 
             <div className="mb-3 text-center w-full flex justify-center text-gray-800">
-                {finishedOnce && (
                     <div onClick={() => {
                         props.fullpageApi.moveTo("slide2")
-                    }} className={`${headerStyles.fadeIn} p-4 2xl:p-6 shadow-2xl cursor-pointer flex items-center flex-col rounded-lg text-gray-300 bg-gray-300 bg-opacity-40 hover:shadow-sm hover:opacity-50 transition-all duration-300`}>
+                    }} className={`${finishedOnce ? headerStyles.fadeIn: "opacity-0"} p-4 2xl:p-6 shadow-2xl cursor-pointer flex items-center flex-col rounded-lg text-gray-300 bg-gray-300 bg-opacity-40 hover:shadow-sm hover:opacity-50 transition-all duration-300`}>
                         <h1 className="text-xl xl:text-3xl 2xl:text-5xl font-semibold ">Let&apos;s Begin!</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 sm:h-10 sm:w-10 lg:h-10 lg:w-10 xl:h-14 xl:w-14 2xl:h-20 2xl:w-20 mt-10 animate-bounce " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                         </svg>
                     </div>
-                )}
             </div>
         </div>
     )
