@@ -22,7 +22,7 @@ html, body {
 }
 
 .fade-in {
-  animation-duration: .4s;
+  animation-duration: .7s;
   animation-timing-function: ease-out;
   animation-delay: 0s;
   animation-iteration-count: 1;

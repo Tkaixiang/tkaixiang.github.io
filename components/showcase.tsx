@@ -1,9 +1,9 @@
 import ShowcaseStyles from '../styles/showcase.module.css'
-import parkaholic from '../public/assets/merge.png'
-import sieberrsec from '../public/assets/sieberrsec.jpg'
-import exegesis from '../public/assets/exegesis.jpg'
-import Microbform from '../public/assets/microbform.jpg'
-import buildit from '../public/assets/buildit.jpg'
+import parkaholic from '../public/assets/merge.webp'
+import sieberrsec from '../public/assets/sieberrsec.webp'
+import exegesis from '../public/assets/exegesis.webp'
+import Microbform from '../public/assets/microbform.webp'
+import buildit from '../public/assets/buildit.webp'
 
 const Showcase = (props) => {
 
