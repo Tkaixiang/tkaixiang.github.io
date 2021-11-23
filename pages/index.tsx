@@ -2,10 +2,11 @@ import Head from 'next/head'
 import Header from '../components/header'
 import About from '../components/about'
 import Showcase from '../components/showcase'
-import background from './../public/assets/background.webp'
+import background from './../public/assets/background.jpg'
 import { useEffect } from 'react'
 import useState from 'react-usestateref'
 import ReactFullpage from '@fullpage/react-fullpage';
+
 
 
 export default function Home(props) {
@@ -69,13 +70,13 @@ export default function Home(props) {
                 <Header fullpageApi={fullpageApi} />
               </div>
 
-              <div id="about" data-anchor="slide2" style={{marginTop: "10vh", marginBottom: "10vh"}} className="section flex items-center">
+              <div id="about" data-anchor="slide2" style={{ marginTop: "10vh", marginBottom: "10vh" }} className="section flex items-center">
                 <div className={`element-style ${visibilities.about ? "fade-in" : "opacity-0"}`}>
                   <About visibilities={visibilities} />
                 </div>
               </div>
 
-              <div id="showcase" data-anchor="slide3" style={{marginTop: "10vh"}} className="section flex items-center">
+              <div id="showcase" data-anchor="slide3" style={{ marginTop: "10vh" }} className="section flex items-center">
                 <div className={`element-style ${visibilities.showcase ? "fade-in" : "opacity-0"}`}>
                   <Showcase />
                 </div>

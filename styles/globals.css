@@ -33,3 +33,10 @@ html, body {
 .element-style {
   @apply m-4 md:m-8 xl:m-12 2xl:m-20 p-3 md:p-4 xl:p-6 2xl:p-8 shadow-2xl bg-gray-700 bg-opacity-70 rounded-3xl;
 }
+
+
+
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: rgb(230, 230, 230) !important;
+}
