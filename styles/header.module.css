@@ -11,7 +11,7 @@
 
 .fadeIn {
   animation-duration: .6s;
-  animation-timing-function: step-end;
+  animation-timing-function: ease-out;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-name: fadeInTransformIn

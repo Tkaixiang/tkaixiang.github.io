@@ -15,7 +15,7 @@ const Header = (props) => {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
 
-    const playText = async () => {
+    const playText = async (): Promise<void> => {
         for (let line = 0; line < text.length; line++) {
             for (let c = 0; c < text[line].length; c++) {
                 setHeader(headerRef.current + text[line][c])
@@ -49,7 +49,7 @@ const Header = (props) => {
         }
     }
 
-    useEffect(() => {
+    useEffect((): void => {
         startUp()
     }, [])
 
