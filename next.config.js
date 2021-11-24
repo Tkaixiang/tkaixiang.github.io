@@ -6,8 +6,8 @@ module.exports = withOptimizedImages({
   images: {
     disableStaticImages: true,
   },
-  basePath: "/personal-site",
-    assetPrefix: "/personal-site",
+  basePath: "",
+    assetPrefix: "",
     optimizeImages: false
   // your config for other plugins or the general next.js here...
 })
