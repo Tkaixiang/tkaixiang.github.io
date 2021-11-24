@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../components/header'
 import About from '../components/about'
 import Showcase from '../components/showcase'
-import background from './../public/assets/background.jpg'
+import background from './../public/assets/background.webp'
 import { useEffect } from 'react'
 import useState from 'react-usestateref'
 import ReactFullpage from '@fullpage/react-fullpage';

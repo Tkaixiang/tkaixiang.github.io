@@ -19,11 +19,11 @@ const Header = (props) => {
         for (let line = 0; line < text.length; line++) {
             for (let c = 0; c < text[line].length; c++) {
                 setHeader(headerRef.current + text[line][c])
-                await sleep(45)
+                await sleep(50)
             }
             if (line < text.length - 1) {
                 setHeader(headerRef.current + "\n")
-                await sleep(450)
+                await sleep(400)
             } 
             
         }
@@ -35,7 +35,7 @@ const Header = (props) => {
     const hideText = async (): Promise<void> => {
         while (headerRef.current.length > 0) {
             setHeader(headerRef.current.slice(0, -1))
-            await sleep(25)
+            await sleep(30)
         }
         await sleep(100)
         await playText()

@@ -3,6 +3,7 @@
     opacity: 0;
     transform: translate(0px, -35px);
   }
+
   100% {
     opacity: 1;
     transform: translate(0px, 0px);
@@ -19,21 +20,23 @@
 
 @keyframes typingEffectAnimation {
   from, to {
-    color: transparent;
+    opacity: 0;
   }
+
   50% {
-    color: orange;
-    }
+    opacity: 1;
+  }
 }
 
 .typingEffect::after {
   content: "|";
-  background-clip: initial;
+  color: #374151;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
   background: transparent !important;
-  animation-duration: .8s;
-  animation-timing-function: ease-out;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-name: typingEffectAnimation;
 }
-
