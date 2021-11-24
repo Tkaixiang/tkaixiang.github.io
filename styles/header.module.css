@@ -11,8 +11,29 @@
 
 .fadeIn {
   animation-duration: .6s;
-  animation-timing-function: ease-out;
+  animation-timing-function: step-end;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-name: fadeInTransformIn
 }
+
+@keyframes typingEffectAnimation {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: orange;
+    }
+}
+
+.typingEffect::after {
+  content: "|";
+  background-clip: initial;
+  background: transparent !important;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-name: typingEffectAnimation;
+}
+

@@ -58,12 +58,12 @@ const Header = (props) => {
             <div>
             </div>
             <div className="text-6xl h-6 lg:text-7xl xl:text-8xl 2xl:text-9xl 2xl:h-10 font-extrabold">
-                <h1 style={{ overflow: "hidden",  whiteSpace: "pre-line"}} className={`bg-clip-text text-transparent bg-gradient-to-r text-center from-purple-600 via-red-600 to-yellow-600`}>
+                <h1 style={{ overflow: "hidden",  whiteSpace: "pre-line"}} className={`${headerStyles.typingEffect} bg-clip-text text-transparent bg-gradient-to-r text-center from-purple-600 via-red-600 to-yellow-600`}>
                     {header}
                 </h1>
             </div>
 
-            <div className="mb-3 text-center w-full flex justify-center text-gray-800">
+            <div style={{marginBottom: "3vh"}} className={` text-center w-full flex justify-center text-gray-800`}>
                     <div onClick={() => {
                         props.fullpageApi.moveTo("slide2")
                     }} className={`${finishedOnce ? headerStyles.fadeIn: "opacity-0"} p-4 2xl:p-6 shadow-2xl cursor-pointer flex items-center flex-col rounded-lg text-gray-200 bg-gray-700 bg-opacity-70 hover:shadow-sm hover:opacity-50 transition-all duration-300`}>

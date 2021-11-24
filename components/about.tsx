@@ -17,8 +17,6 @@ import godot from '../public/assets/godot.webp'
 import csharp from '../public/assets/csharp.webp'
 import nginx from '../public/assets/nginx.png'
 import AboutStyles from '../styles/about.module.css'
-import GithubSVG from '../public/assets/github.svg'
-import LinkedinSVG from '../public/assets/linkedin.svg'
 import { Line } from 'rc-progress';
 import useState from 'react-usestateref'
 import { useEffect } from 'react';
@@ -119,9 +117,9 @@ const About = (props) => {
 
             <hr className="mt-5 border-gray-500 border-t-2" />
             <h2 style={{ width: "fit-content" }} className="mt-2 text-3xl lg:text-4xl 2xl:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-green-500"> Proficiency &amp; Skills</h2>
-            <div className="mt-5 grid lg:grid-cols-2 gap-4">
+            <div className="mt-7 grid lg:grid-cols-2 gap-4">
                 <div id="line1" className="flex flex-col justify-center">
-                    <div className="text-2xl font-bold flex items-baseline ">
+                    <div className="mb-2 text-2xl font-bold flex items-baseline ">
                         <h1 className="mr-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-red-500">Front-End Development</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -144,7 +142,7 @@ const About = (props) => {
                 </div>
                 <div className="lg:col-span-2 flex justify-center"><hr className="mt-5 border-gray-700 w-19/20 border-t-2 border-dashed" /></div>
                 <div className="flex flex-col justify-center">
-                    <div id="line2" className="text-2xl font-bold flex items-baseline">
+                    <div id="line2" className="mb-2 text-2xl font-bold flex items-baseline">
                         <h1 className="mr-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-300  to-yellow-300">Back-End Development</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd" />
@@ -201,7 +199,7 @@ const About = (props) => {
                 </div>
                 <div className="lg:col-span-2 flex justify-center"><hr className="mt-5 border-gray-700 w-19/20 border-t-2 border-dashed" /></div>
                 <div className="flex flex-col justify-center">
-                    <div id="line3" className="text-2xl font-bold flex items-baseline">
+                    <div id="line3" className="mb-2 text-2xl font-bold flex items-baseline">
                         <h1 className="mr-2 bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-blue-500  to-green-300">Languages I am Comfortable In</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z" />
@@ -224,7 +222,7 @@ const About = (props) => {
                 </div>
                 <div className="lg:col-span-2 flex justify-center"><hr className="mt-5 border-gray-700 w-19/20 border-t-2 border-dashed" /></div>
                 <div className="flex flex-col justify-center">
-                    <div id="line4" className="text-2xl font-bold flex items-baseline">
+                    <div id="line4" className="mb-2 text-2xl font-bold flex items-baseline">
                         <h1 className="mr-2 bg-clip-text text-transparent bg-gradient-to-r from-red-500  to-blue-500">Cybersecurity</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
@@ -240,13 +238,13 @@ const About = (props) => {
                     </div>
                     <div className={AboutStyles.cardStyle}>
                         <div>
-                            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-100 to-red-700">Reverse Engineering</h1>
+                            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-100 to-red-700 text-lg">Reverse Engineering</h1>
                         </div>
                     </div>
                 </div>
                 <div className="lg:col-span-2 flex justify-center"><hr className="mt-5 border-gray-700 w-19/20 border-t-2 border-dashed" /></div>
                 <div className="flex flex-col justify-center">
-                    <div id="line5" className="text-2xl font-bold flex items-baseline">
+                    <div id="line5" className="mb-2 text-2xl font-bold flex items-baseline">
                         <h1 className="mr-2 bg-clip-text text-transparent bg-gradient-to-r from-red-500  to-yellow-500">Misc.</h1>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
