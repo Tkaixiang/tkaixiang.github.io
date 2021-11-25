@@ -49,7 +49,7 @@ export default function Home(props) {
   }, [])
 
   return (
-    <div style={{ height: "fit-content", backgroundImage: `url(${background})`, backgroundSize: "cover" }} className="backgroundStyle bg-fixed fade-in w-full h-full">
+    <div style={{ height: "fit-content", backgroundImage: `url(${background})`, backgroundSize: "100% 50%", backgroundRepeat: "no-repeat" }} className="backgroundStyle fade-in w-full h-full">
       <Head>
         <title>Tkaixiang</title>
         <meta name="description" content="Home of Tkai" />

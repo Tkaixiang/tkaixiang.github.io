@@ -30,7 +30,7 @@
 
 .typingEffect::after {
   content: "|";
-  color: #374151;
+  color: #6B7280;
   background-clip: unset !important;
   -webkit-background-clip: unset !important;
   background: transparent !important;
