@@ -6,6 +6,7 @@ import background from './../public/assets/background.webp'
 import { useEffect } from 'react'
 import useState from 'react-usestateref'
 import ReactFullpage from '@fullpage/react-fullpage';
+import Particles from "react-tsparticles";
 
 
 
@@ -55,6 +56,81 @@ export default function Home(props) {
         <meta name="description" content="Home of Tkai" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Particles options={{
+        "fullScreen": {
+          "zIndex": 0
+        },
+        fpsLimit: 60,
+        "interactivity": {
+          "events": {
+            "onClick": {
+              "enable": true,
+              "mode": "repulse"
+            }
+          },
+          "modes": {
+            "repulse": {
+              "distance": 400
+            }
+          }
+        },
+        "particles": {
+          "color": {
+            "value": "#ffffff"
+          },
+          "links": {
+            "color": {
+              "value": "#ffffff"
+            },
+            "distance": 150,
+            "opacity": 0.4
+          },
+          "move": {
+            "attract": {
+              "rotate": {
+                "x": 600,
+                "y": 600
+              }
+            },
+            "enable": true,
+            "path": {},
+            "outModes": "out",
+            "random": true,
+            "speed": 1,
+            "spin": {}
+          },
+          "number": {
+            "density": {
+              "enable": true
+            },
+            "value": 35
+          },
+          "opacity": {
+            "random": true,
+            "value": {
+              "min": 0,
+              "max": 1
+            },
+            "animation": {
+              "enable": true,
+              "speed": 1,
+              "minimumValue": 0
+            }
+          },
+          "size": {
+            "random":true,
+            "value": {
+              "min": 1,
+              "max": 3
+            },
+            "animation": {
+              "speed": 4,
+              "minimumValue": 2
+            }
+          }
+        }
+      }} />
 
       <ReactFullpage
         //fullpage options
