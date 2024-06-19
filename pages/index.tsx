@@ -49,12 +49,11 @@ export default function Home(props) {
     <div className="bg-black">
       <div
         style={{
-          height: "fit-content",
+          backgroundSize: "cover",
           backgroundImage: `url(${background})`,
-          backgroundSize: "100% 50%",
           backgroundRepeat: "no-repeat",
         }}
-        className="backgroundStyle fade-in w-full h-full"
+        className="animate-in fade-in w-full h-full duration-500 flex justify-center"
       >
         <Head>
           <title>Tkaixiang</title>
@@ -166,7 +165,7 @@ export default function Home(props) {
                 >
                   <div
                     className={`glassy-bg element-style ${
-                      visibilities.about ? "fade-in" : "opacity-0"
+                      visibilities.about ? "animate-in fade-in" : "opacity-0"
                     }`}
                   >
                     <About visibilities={visibilities} />
@@ -181,7 +180,7 @@ export default function Home(props) {
                 >
                   <div
                     className={`glassy-bg element-style ${
-                      visibilities.showcase ? "fade-in" : "opacity-0"
+                      visibilities.showcase ? "animate-in fade-in" : "opacity-0"
                     }`}
                   >
                     <Showcase />

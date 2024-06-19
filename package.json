@@ -9,7 +9,7 @@
     "deploy": "export NODE_ENV=production && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.19",
+    "@fullpage/react-fullpage": "^0.1.42",
     "@types/node": "^16.11.7",
     "@types/react": "^17.0.34",
     "autoprefixer": "^10.4.0",

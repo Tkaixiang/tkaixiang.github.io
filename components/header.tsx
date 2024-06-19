@@ -19,12 +19,7 @@ const Header = (props) => {
       for (let c = 0; c < text[line].length; c++) {
         setHeader([
           ...headerRef.current,
-          <span
-            key={`line-${line}-${c}`}
-            className="text-slate-300 fade-in animate-in"
-          >
-            {text[line][c]}
-          </span>,
+          <span key={`line-${line}-${c}`}>{text[line][c]}</span>,
         ]);
         await sleep(50);
       }
@@ -62,10 +57,10 @@ const Header = (props) => {
   return (
     <div
       style={{ justifyContent: "space-between" }}
-      className="h-full text-center flex items-center flex-col"
+      className="h-screen text-center flex items-center flex-col"
     >
       <div></div>
-      <div className="text-6xl h-6 lg:text-7xl xl:text-8xl 2xl:text-9xl 2xl:h-10 font-extrabold">
+      <div className="text-6xl h-6 lg:text-7xl xl:text-8xl font-extrabold">
         <h1
           style={{ overflow: "hidden", whiteSpace: "pre-line" }}
           className={`${headerStyles.typingEffect} bg-clip-text text-transparent bg-gradient-to-r text-center from-purple-600 via-red-600 to-yellow-600`}
@@ -86,12 +81,12 @@ const Header = (props) => {
             finishedOnce ? headerStyles.fadeIn : "opacity-0"
           } p-4 2xl:p-6 shadow-2xl cursor-pointer flex items-center flex-col rounded-lg text-gray-200 glassy-bg hover:shadow-sm hover:opacity-50 hover:-translate-y-3 transition-all duration-300`}
         >
-          <h1 className="text-xl xl:text-3xl 2xl:text-5xl font-semibold ">
+          <h1 className="text-xl xl:text-3xl font-semibold ">
             Let&apos;s Begin!
           </h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-10 sm:h-10 sm:w-10 lg:h-10 lg:w-10 xl:h-14 xl:w-14 2xl:h-20 2xl:w-20 mt-10 animate-bounce "
+            className="h-10 sm:h-10 sm:w-10 lg:h-10 lg:w-10 xl:h-14 xl:w-14  mt-10 animate-bounce "
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

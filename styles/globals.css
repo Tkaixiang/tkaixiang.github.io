@@ -10,29 +10,8 @@ body {
   overflow: hidden;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translate(0px, 35px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0px, 0px);
-  }
-}
-
-@layer components {
-  .glassy-bg {
-    @apply bg-gray-700 bg-opacity-20;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(76, 76, 76, 0.3);
-  }
-
-  .element-style {
-    @apply m-5 md:m-8 xl:m-12 2xl:m-20 p-4 xl:p-6 2xl:p-8 shadow-2xl rounded-3xl;
-  }
+.element-style {
+  @apply m-5 md:m-8 xl:m-12 2xl:m-20 p-4 xl:p-6 2xl:p-8 shadow-2xl rounded-3xl;
 }
 
 #fp-nav ul li a span,
