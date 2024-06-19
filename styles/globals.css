@@ -22,14 +22,6 @@ body {
 }
 
 @layer components {
-  .fade-in {
-    animation-duration: 0.7s;
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-name: fade-in;
-  }
-
   .glassy-bg {
     @apply bg-gray-700 bg-opacity-20;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

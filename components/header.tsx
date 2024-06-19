@@ -17,17 +17,19 @@ const Header = (props) => {
   const playText = async (): Promise<void> => {
     for (let line = 0; line < text.length; line++) {
       for (let c = 0; c < text[line].length; c++) {
-        headerRef.current.push(
-          <span key={`line-${line}-${c}`} className="fade-in">
+        setHeader([
+          ...headerRef.current,
+          <span
+            key={`line-${line}-${c}`}
+            className="text-slate-300 fade-in animate-in"
+          >
             {text[line][c]}
           </span>,
-        );
-        setHeader([...headerRef.current]);
+        ]);
         await sleep(50);
       }
       if (line < text.length - 1) {
-        headerRef.current.push(<br key="break" />);
-        setHeader([...headerRef.current]);
+        setHeader([...headerRef.current, <br key="break" />]);
         await sleep(400);
       }
     }
