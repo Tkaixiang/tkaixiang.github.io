@@ -1,14 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html{
+html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   overflow: hidden;
 }
-
 
 @keyframes fade-in {
   0% {
@@ -21,22 +21,29 @@ html, body {
   }
 }
 
-.fade-in {
-  animation-duration: .7s;
-  animation-timing-function: ease-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-name: fade-in
+@layer components {
+  .fade-in {
+    animation-duration: 0.7s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: fade-in;
+  }
+
+  .glassy-bg {
+    @apply bg-gray-700 bg-opacity-20;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(76, 76, 76, 0.3);
+  }
+
+  .element-style {
+    @apply m-5 md:m-8 xl:m-12 2xl:m-20 p-4 xl:p-6 2xl:p-8 shadow-2xl rounded-3xl;
+  }
 }
 
-
-.element-style {
-  @apply m-5 md:m-8 xl:m-12 2xl:m-20 p-4 xl:p-6 2xl:p-8 shadow-2xl bg-gray-700 bg-opacity-70 rounded-3xl;
-}
-
-
-
-
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
   background: rgb(230, 230, 230) !important;
 }
