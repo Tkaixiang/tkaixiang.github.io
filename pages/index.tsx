@@ -49,7 +49,7 @@ export default function Home(props) {
     <div className="bg-black">
       <div
         style={{
-          backgroundSize: "cover",
+          backgroundSize: "auto",
           backgroundImage: `url(${background})`,
           backgroundRepeat: "no-repeat",
         }}
